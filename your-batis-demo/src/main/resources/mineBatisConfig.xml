@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration SYSTEM "C:\Users\ngoyat\Desktop\demo\your-batis-demo\src\main\java\com\shy\yourbatiscode\dtd\config.dtd">
+<configuration>
+    <!--可以选择是否使用池化技术-->
+    <dataSource type="POOLED">
+        <driver value="com.mysql.jdbc.Driver"/>
+        <url value="jdbc:mysql://localhost:3306/kh80"/>
+        <username value="root"/>
+        <password value="root"/>
+    </dataSource>
+    <mappers>
+        <!--可以指定一个或多个mapper xml路径-->
+        <mapper resource="mapper/*.xml"/>
+    </mappers>
+</configuration>

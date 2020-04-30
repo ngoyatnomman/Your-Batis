@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT mapper (select*,insert*,update*,delete*)>
+    <!ATTLIST mapper namespace CDATA>
+
+<!ELEMENT select (#PCDATA)>
+    <!ATTLIST select id ID #REQUIRED>
+    <!ATTLIST select parameterType CDATA>
+    <!ATTLIST select resultType CDATA #REQUIRED>
+
+<!ELEMENT insert (#PCDATA)>
+    <!ATTLIST insert id ID #REQUIRED>
+    <!ATTLIST insert parameterType CDATA>
+
+<!ELEMENT update (#PCDATA)>
+    <!ATTLIST update id ID #REQUIRED>
+    <!ATTLIST update parameterType CDATA>
+
+<!ELEMENT delete (#PCDATA)>
+    <!ATTLIST delete id ID #REQUIRED>
+    <!ATTLIST delete parameterType CDATA>

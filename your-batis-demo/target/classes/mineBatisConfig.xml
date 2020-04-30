@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration SYSTEM "C:\Users\ngoyat\Desktop\demo\your-batis-demo\src\main\java\com\shy\mineBatisCode\dtd\config.dtd">
+<configuration>
+    <dataSource type="POOLED">
+        <driver value="com.mysql.jdbc.Driver"/>
+        <url value="jdbc:mysql://localhost:3306/kh80"/>
+        <username value="root"/>
+        <password value="root"/>
+    </dataSource>
+    <mappers>
+        <mapper resource="mapper/*.xml"/>
+    </mappers>
+</configuration>

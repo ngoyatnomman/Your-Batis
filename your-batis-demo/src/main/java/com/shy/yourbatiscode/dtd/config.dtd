@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT configuration (dataSource,mappers)>
+<!ELEMENT dataSource (driver,url,username,password)>
+    <!ATTLIST dataSource type (POOLED|UNPOOLED) #REQUIRED>
+<!ELEMENT driver EMPTY>
+    <!ATTLIST driver value CDATA  #REQUIRED>
+<!ELEMENT url EMPTY>
+    <!ATTLIST url value CDATA #REQUIRED>
+<!ELEMENT username EMPTY>
+    <!ATTLIST username value CDATA  #REQUIRED>
+<!ELEMENT password EMPTY>
+    <!ATTLIST password value CDATA #REQUIRED>
+<!ELEMENT mappers (mapper+)>
+<!ELEMENT mapper EMPTY>
+    <!ATTLIST mapper resource CDATA #REQUIRED>

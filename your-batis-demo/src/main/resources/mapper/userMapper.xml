@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper SYSTEM "C:\Users\ngoyat\Desktop\demo\your-batis-demo\src\main\java\com\shy\yourbatiscode\dtd\mapper.dtd">
+<mapper namespace="com.shy.mapper.UserMapper">
+
+    <select id="selectAll" resultType="com.shy.pojo.User">
+        select * from user
+    </select>
+
+    <select id="selectById" resultType="com.shy.pojo.User" parameterType="Integer">
+        select * from user where userId = #{userId}
+    </select>
+
+    <select id="selectByIdPwd" resultType="com.shy.pojo.User">
+        select * from user where userId = #{userId} and password = #{password}
+    </select>
+
+    <insert id="addUser" parameterType="com.shy.pojo.User">
+        INSERT INTO `kh80`.`user` (
+        `username`,
+        `password`,
+        `sex`,
+        `money`
+        )
+        VALUES
+        (
+        #{username},
+        #{password},
+        #{sex},
+        #{money}
+        )
+    </insert>
+
+    <delete id="deleteUser" parameterType="Integer">
+        delete from user where userId = #{userId}
+    </delete>
+
+    <update id="updateUser" parameterType="Integer">
+        UPDATE `kh80`.`user`
+        SET `username` = 'xiaomiu',
+        `password` = 'xiaomiu',
+        `sex` = '女',
+        `money` = '10'
+        WHERE
+        (`userId` = #{userId});
+    </update>
+
+</mapper>
